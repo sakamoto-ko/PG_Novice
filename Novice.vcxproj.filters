@@ -32,6 +32,24 @@
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
+    <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StageScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="IScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -97,17 +115,15 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\3d\SpotLight.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="..\DirectXGame\math\Vector2.h">
-      <Filter>KamataEngine\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\DirectXGame\math\Vector3.h">
-      <Filter>KamataEngine\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\DirectXGame\math\Vector4.h">
-      <Filter>KamataEngine\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\DirectXGame\math\Matrix4x4.h">
-      <Filter>KamataEngine\Include</Filter>
-    </ClInclude>
+    <ClInclude Include="C:\KamataEngine\DirectXGame\math\Matrix4x4.h" />
+    <ClInclude Include="C:\KamataEngine\DirectXGame\math\Vector2.h" />
+    <ClInclude Include="C:\KamataEngine\DirectXGame\math\Vector3.h" />
+    <ClInclude Include="C:\KamataEngine\DirectXGame\math\Vector4.h" />
+    <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h" />
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="StageScene.h" />
+    <ClInclude Include="IScene.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
 </Project>
