@@ -35,8 +35,4 @@ public: // メンバ関数
 
 	private:
 	int gamecleargazo = 0u;
-	const int kWindowWidth = 1280;
-	const int kWindowHeight = 720;
-	const int kWindowWidthLeft = 240;
-	const int kWindowWidthRight = 1080;
 };
