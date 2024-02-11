@@ -1,11 +1,11 @@
 #pragma once
 
-#include <memory>
+#include "IScene.h"
 
 /// <summary>
 /// タイトルシーン
 /// </summary>
-class TitleScene {
+class TitleScene : public IScene{
 
 public: // メンバ関数
 	/// <summary>
@@ -21,15 +21,18 @@ public: // メンバ関数
 	/// <summary>
 	/// 初期化
 	/// </summary>
-	void Initialize();
+	void Initialize() override;
 
 	/// <summary>
 	/// 毎フレーム処理
 	/// </summary>
-	void Update();
+	void Update(char keys[256], char preKeys[256]) override;
 
 	/// <summary>
 	/// 描画
 	/// </summary>
-	void Draw();
+	void Draw() override;
+
+	private:
+	int titlegazo = 0u;
 };
