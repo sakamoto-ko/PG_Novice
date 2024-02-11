@@ -14,7 +14,7 @@ const char kWindowTitle[] = "LC1B_10_サカモトコウスケ_竹取物語Anothe
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
-	Novice::Initialize(kWindowTitle, kWindowWidth, kWindowWHeight);
+	Novice::Initialize(kWindowTitle, 1280, 720);
 
 	GameManager* gameManager = new GameManager();
 

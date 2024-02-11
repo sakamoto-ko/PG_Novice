@@ -2,11 +2,6 @@
 #include <Novice.h>
 #include <memory>
 
-static const int kWindowWidth = 1280;
-static const int kWindowWHeight = 720;
-static const int kWindowWidthLeft = 240;
-static const int kWindowWidthRight = 1080;
-
 enum SCENE {TITLE,STAGE,CLEAR};
 class IScene {
 protected:

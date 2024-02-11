@@ -98,4 +98,9 @@ private:
 	int p2eX = (int)playerBullet.x - (int)enemy.x;
 	int p2eY = (int)playerBullet.y - (int)enemy.y;
 	int p2eR = (int)playerBullet.r + (int)enemy.r;
+
+	const int kWindowWidth = 1280;
+	const int kWindowHeight = 720;
+	const int kWindowWidthLeft = 240;
+	const int kWindowWidthRight = 1080;
 };

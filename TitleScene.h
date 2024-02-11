@@ -5,7 +5,7 @@
 /// <summary>
 /// タイトルシーン
 /// </summary>
-class TitleScene : public IScene{
+class TitleScene : public IScene {
 
 public: // メンバ関数
 	/// <summary>
@@ -33,6 +33,10 @@ public: // メンバ関数
 	/// </summary>
 	void Draw() override;
 
-	private:
+private:
 	int titlegazo = 0u;
+	const int kWindowWidth = 1280;
+	const int kWindowHeight = 720;
+	const int kWindowWidthLeft = 240;
+	const int kWindowWidthRight = 1080;
 };
