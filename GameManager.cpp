@@ -6,8 +6,7 @@ GameManager::GameManager() {
 	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
 }
 
-GameManager::~GameManager() {
-}
+GameManager::~GameManager() {}
 
 int GameManager::Run() {
 	while (Novice::ProcessMessage() == 0) {
@@ -24,7 +23,7 @@ int GameManager::Run() {
 			sceneArr_[currentSceneNo_]->Initialize();
 		}
 
-		sceneArr_[currentSceneNo_]->Update(keys, preKeys);
+		sceneArr_[currentSceneNo_]->Update();
 
 		sceneArr_[currentSceneNo_]->Draw();
 

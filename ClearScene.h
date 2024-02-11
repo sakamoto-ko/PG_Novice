@@ -26,7 +26,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 毎フレーム処理
 	/// </summary>
-	void Update(char keys[256], char preKeys[256]) override;
+	void Update() override;
 
 	/// <summary>
 	/// 描画

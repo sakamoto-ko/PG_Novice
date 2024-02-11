@@ -1,33 +1,24 @@
 #pragma once
-#include "Model.h"
-#include "WorldTransform.h"
-#include"Input.h"
-#include"ViewProjection.h"
+#include <Novice.h>
+#include "Vector3.h"
 
-//GameSceneクラスの前方宣言
+// GameSceneクラスの前方宣言
 class GameScene;
 
 class Player {
 private:
-	//ワールド変換データ
-	WorldTransform worldTransform_;
-
-	//モデル
-	Model* model_ = nullptr;
-
-	//テクスチャハンドル
-	uint32_t textureHandle_ = 0u;
-
-	//キーボード入力
-	Input* input_ = nullptr;
+	Vector3 translate_ = {0.0f, 0.0f, 0.0f};
 
 public:
 	Player();
 	~Player();
-	//初期化
-	void Initialize(Model* model);
-	//更新
-	void Update(const ViewProjection viewProjection);
-	//描画
-	void Draw(ViewProjection viewProjection);
+	// 初期化
+	void Initialize();
+	// 更新
+	void Update();
+	// 描画
+	void Draw();
+
+	void MoveRight();
+	void MoveLeft();
 };
