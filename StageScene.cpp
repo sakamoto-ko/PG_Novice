@@ -5,7 +5,7 @@ StageScene::StageScene() {}
 StageScene::~StageScene() {}
 
 void StageScene::Initialize() {
-	/* playergazo = Novice::LoadTexture("./player.png");
+	 playergazo = Novice::LoadTexture("./player.png");
 	 playerBulletgazo = Novice::LoadTexture("./playerbullet.png");
 	 enemygazo = Novice::LoadTexture("./enemy.png");
 
@@ -27,14 +27,14 @@ void StageScene::Initialize() {
 
 	playerFlag.alive = true;
 	playerBulletFlag.shot = false;
-	enemyFlag.alive = true;*/
+	enemyFlag.alive = true;
 }
 
 void StageScene::Update(char keys[256], char preKeys[256]) {
-	if (keys[DIK_SPACE] && !preKeys[DIK_SPACE]) {
+	/*if (keys[DIK_SPACE] && !preKeys[DIK_SPACE]) {
 		sceneNo = CLEAR;
-	}
-	/*if (keys[DIK_W]) {
+	}*/
+	if (keys[DIK_W]) {
 		player.y -= player.ySpeed;
 	}
 	if (keys[DIK_A]) {
@@ -58,10 +58,10 @@ void StageScene::Update(char keys[256], char preKeys[256]) {
 	if (player.y <= 0) {
 		player.y = 0;
 	}
-	if (player.y + 50 >= kWindowWHeight) {
-		player.y = kWindowWHeight - 50;
+	if (player.y + 50 >= kWindowHeight) {
+		player.y = kWindowHeight - 50;
 		if (keys[DIK_W] && preKeys[DIK_W] != 0) {
-			player.y = kWindowWHeight - 50;
+			player.y = kWindowHeight - 50;
 		}
 	}
 
@@ -87,26 +87,26 @@ void StageScene::Update(char keys[256], char preKeys[256]) {
 	p2eR = (int)playerBullet.r + (int)enemy.r;
 	if (p2eX * p2eX + p2eY * p2eY <= p2eR * p2eR) {
 		sceneNo = CLEAR;
-	}*/
+	}
 }
 
 void StageScene::Draw() {
-	//// プレイヤーの描画
-	//Novice::DrawSpriteRect(
-	//    player.x, player.y, player.scaleX, player.scaleY, 32, 32, playergazo, 0.5f, 2.0f, 0.0f,
-	//    0xFFFFFFFF);
+	// プレイヤーの描画
+	Novice::DrawSpriteRect(
+	    player.x, player.y, player.scaleX, player.scaleY, 32, 32, playergazo, 0.5f, 2.0f, 0.0f,
+	    0xFFFFFFFF);
 
-	//// プレイヤーの弾の描画
-	//if (playerBulletFlag.shot) {
-	//	Novice::DrawSpriteRect(
-	//	    (int)playerBullet.x, (int)playerBullet.y, (int)playerBullet.scaleX,
-	//	    (int)playerBullet.scaleY, 16, 16, playerBulletgazo, 1.0f, 2.0f, 0.0f, 0xFFFFFFFF);
-	//}
+	// プレイヤーの弾の描画
+	if (playerBulletFlag.shot) {
+		Novice::DrawSpriteRect(
+		    (int)playerBullet.x, (int)playerBullet.y, (int)playerBullet.scaleX,
+		    (int)playerBullet.scaleY, 16, 16, playerBulletgazo, 1.0f, 2.0f, 0.0f, 0xFFFFFFFF);
+	}
 
-	//// 敵の描画
-	//if (enemyFlag.alive) {
-	//	Novice::DrawSpriteRect(
-	//	    enemy.x, enemy.y, enemy.scaleX, enemy.scaleY, 32, 32, enemygazo, 0.5f, 2.0f, 0.0f,
-	//	    0xFFFFFFFF);
-	//}
+	// 敵の描画
+	if (enemyFlag.alive) {
+		Novice::DrawSpriteRect(
+		    enemy.x, enemy.y, enemy.scaleX, enemy.scaleY, 32, 32, enemygazo, 0.5f, 2.0f, 0.0f,
+		    0xFFFFFFFF);
+	}
 }

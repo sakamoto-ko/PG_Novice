@@ -4,6 +4,9 @@ GameManager::GameManager() {
 	sceneArr_[TITLE] = std::make_unique<TitleScene>();
 	sceneArr_[STAGE] = std::make_unique<StageScene>();
 	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
+
+	currentSceneNo_ = TITLE;
+	sceneArr_[currentSceneNo_]->Initialize();
 }
 
 GameManager::~GameManager() {
